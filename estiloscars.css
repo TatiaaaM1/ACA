@@ -1,0 +1,261 @@
+:root{
+  --colorfontnav:	#ffffff;
+  --colorheader:rgb(195, 131, 221);
+  --colorp:rgb(196, 72, 165);
+  --colorpnos:rgb(209, 132, 219);
+  --colorfooter:rgb(146, 27, 150);
+  --colorfondoimg:rgb(116, 28, 111);
+  --colorhover:rgb(223, 127, 252);
+  --colorhoverpro:rgb(196, 102, 191);
+  --fontbody:'Varela Round', sans-serif;
+  --fontnav:'Varela Round', sans-serif;
+
+  
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+
+
+body{
+  font-size:16px;
+  font-family:var(--fontbody);
+  line-height: 1.5;
+  
+}
+
+p{
+  font-size: 1.8rem;
+  color:var(--colorp);
+}
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 3.2rem;
+}
+h3{
+  font-size: 2.4rem;
+}
+
+h1,h2,h3,h4{
+  text-align: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+header.header{
+  background:var(--colorheader);
+  display:flex;
+  justify-content: center;
+}
+
+@media (min-width:768px) {
+  header.header{
+      flex-direction: row;
+  }
+}
+
+img.header__logo{
+  margin: 3rem 0;
+}
+
+nav.navegacion{ 
+  background:linear-gradient(to right, rgb(133, 55, 153),rgb(122, 59, 124) );   
+  padding: .5rem 0;
+  display: flex;
+  justify-content:center; 
+  gap: 2rem;  
+}
+@media (min-width:768px) {
+  nav.navegacion{
+      flex-direction: row;
+  }
+  
+}
+a.navegacion__enlace{
+  font-family: var(--fontnav);
+  color: var(--colorfontnav);
+  font-size: 3rem;
+
+}
+
+.navegacion__enlace--activo,
+a.navegacion__enlace:hover{
+  color:var(--colorhover);
+}
+
+div.grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+@media (min-width:768px) {
+  .grid{
+      grid-template-columns: repeat(4,1fr);
+  }
+}
+
+div.producto{
+  background-color:var(--colorfondoimg);
+  padding: 1rem;
+}
+img.producto__imagen{
+  width:100%;
+}
+p.producto__nombre{
+  font-size: 4rem;
+}
+p.producto__precio{
+  font-size: 2.8rem;
+  color:var(--colorp);
+}
+
+p.producto__nombre,
+.producto__precio{
+
+  font-family: var(--fontnav);
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+div.grafico{
+  min-height:30rem ;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+div.grafico--autos{
+  grid-row: 1/2;
+  grid-column:1/3;
+  background-image: url(CARROS1.jpg);
+}
+
+div.grafico--node{
+  grid-row:4/5;
+  grid-column:2/4;
+  background-image: url(Carros3.jpg.crdownload);
+}
+@media (min-width:768px) {
+  div.grafico--node{
+      grid-row: 5/6;
+      grid-column: 2/4;
+  }
+}
+
+footer.footer{
+  background-color:var(--colorfooter);
+  padding: 1rem 0;
+  margin-top: 2.2rem;
+}
+p.footer__texto{
+ 
+  text-align: center;
+}
+
+/* NOSOTROS */
+
+div.Nosotros{
+  display: grid;
+  grid-template-rows:repeat(2,auto);
+}
+@media (min-width:768px) {
+  div.Nosotros{
+      grid-template-rows:repeat(2,1fr);
+      column-gap:2rem;
+      }
+}
+
+
+img.Nosotros__img{
+  grid-row: 1,2;
+
+}
+@media (min-width:768px) {
+  img.Nosotros__img{
+      grid-column:2/3;
+  }
+}
+
+div.Nosotros__contenido p{
+  color:var(--colorpnos);
+}
+
+div.Bloques{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+@media (min-width:768px) {
+  div.Bloques{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+div.blok{
+  text-align: center;
+}
+div.blok p{
+  color: var(--colorpnos);
+}
+img.blok__imagen{
+  width: 50%;
+}
+h3.blok__titulo{
+  margin: 0;
+}
+
+ /*PRODUCTOS*/
+ 
+@media (min-width:768px) {
+  .Auto{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 1rem;   
+  }
+}
+
+.Auto__contenido p{
+  color: var(--colorpnos);
+}
+
+.formulario{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 2rem;
+}
+
+.formulario__campo{
+  border-color: var(--colorfondoimg);
+  border-width:1rem;
+  border-style: solid;
+  background-color: transparent;
+  color:var(--colorpnos);
+  font-size: 2rem;
+  font-family: var(--fontbody);
+  padding: 1rem;
+}
+
+.formulario__submit{
+  background-color: var(--colorp);
+  border:none;
+  font-size:2rem;
+  font-family: var(--fontbody);
+  padding: 2rem;
+  transition:background-color .3sease;    
+}
+
+.formulario__submit:hover{
+  cursor: pointer;
+  background-color:var(--colorhoverpro);
+}
